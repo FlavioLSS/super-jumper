@@ -23,6 +23,7 @@ const jump = () => {
     audio.play();
     const soundtrack = document.querySelector('#audio-soundtrack');
     soundtrack.play();
+    const start = document.querySelector('#title-start');
   
     const cloud = document.querySelector('.cloud');
     cloud.classList.add('startCloud');
@@ -31,6 +32,7 @@ const jump = () => {
     const sun = document.querySelector('.sun');
     sun.src = './imgs/sun.gif';
     
+    start.style.display = 'none';
     mario.classList.add('jump');
     mario.classList.remove('marioStart');
     mario.src = './imgs/mario-jump.png';
@@ -41,7 +43,7 @@ const jump = () => {
     mario.src = './imgs/mario-run.gif'
     mario.classList.remove('jump');
     scoreNumber.innerHTML = score++;
-  }, 680);
+  }, 650);
 }
 
 const loop = setInterval(() => {
